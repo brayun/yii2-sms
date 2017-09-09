@@ -1,0 +1,25 @@
+{
+    "name": "brayun/yii2-sms",
+    "keywords": ["yii2", "sms", "validation"],
+    "description": "ucenter",
+    "homepage": "https://www.brayun.com",
+    "minimum-stability": "stable",
+    "type": "yii2-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ethan",
+            "email": "ethan@brayun.com",
+            "homepage": "https://www.brayun.com"
+        }
+    ],
+    "require": {
+        "brayun/aliyun-sms": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "brayun\\sms\\": "src/"
+        }
+    }
+}
+
