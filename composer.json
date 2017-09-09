@@ -1,7 +1,7 @@
 {
     "name": "brayun/yii2-sms",
     "keywords": ["yii2", "sms", "validation"],
-    "description": "ucenter",
+    "description": "短信使用阿里云短信",
     "homepage": "https://www.brayun.com",
     "minimum-stability": "stable",
     "type": "yii2-extension",
