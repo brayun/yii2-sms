@@ -55,7 +55,7 @@ class PhoneCodeValidator extends Validator
      */
     public function validateAttribute($model, $attribute)
     {
-        if (\Yii::$app->cache->get($this->cachePrefix.$model->{$this->phoneField}) === $model->{$attribute}) {
+        if (\Yii::$app->cache->get($this->cachePrefix.$model->{$this->phoneField}) == $model->{$attribute}) {
             return true;
         }
         $this->addError($model, $attribute, $this->message);
