@@ -52,3 +52,18 @@ public function rules()
     ];
 }
 ```
+
+## 组件使用示例 main.php components下添加
+```PHP
+'components' => [
+    'sms' => [
+        'class' => 'brayun\sms\Application',
+        'signName' => '统一签名'
+    ],
+    ...
+]
+```
+### 组件使用
+```PHP
+Yii::$app->sms->send('13000000000','SMS_123456',['code'=>1234], '这里签名可另写');
+```
