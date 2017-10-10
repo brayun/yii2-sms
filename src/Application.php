@@ -46,7 +46,9 @@ class Application extends Component
         $request->setPhoneNumbers($phone);
         $request->setSignName($signName ? :$this->signName);
         $request->setTemplateCode($tplCode);
-        $request->setTemplateParam(Json::encode($params));
+        if ($params) {
+            $request->setTemplateParam(Json::encode($params));
+        }
         $res = $client->getAcsResponse($request);
         if (isset($res->Code) && $res->Code == 'OK') {
             return [
