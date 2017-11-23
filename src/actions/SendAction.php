@@ -74,10 +74,10 @@ class SendAction extends Action
             }
             return $this->sendSms(\Yii::$app->request->post($this->phoneField));
         }
-        return [
+        return json_encode([
             'code' => 1,
             'msg' => '请输入手机号码'
-        ];
+        ]);
     }
 
     /**
@@ -115,15 +115,15 @@ class SendAction extends Action
                 \Yii::$app->cache->set($dateRecord, 1, strtotime(date('Y-m-d 23:59:59')) - time());
             }
 
-            return [
+            return json_encode([
                 'code' => 0,
                 'msg' => '发送成功'
-            ];
+            ]);
         }
-        return [
+        return json_encode([
             'code' => 1,
             'msg' => '发送失败'
-        ];
+        ]);
     }
 
 }
